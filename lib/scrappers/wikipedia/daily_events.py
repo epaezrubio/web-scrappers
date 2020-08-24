@@ -54,7 +54,7 @@ class WikipediaDailyEventScrapper(BaseScrapper):
                 if bullet_title not in results:
                     results[bullet_title] = []
 
-                results[bullet_title].append(bullet)
+                results[bullet_title].append(text)
 
         return results
 
