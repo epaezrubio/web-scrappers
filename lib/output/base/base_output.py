@@ -1,4 +1,4 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
 
 class BaseOutput(ABC):
@@ -6,5 +6,5 @@ class BaseOutput(ABC):
         super(BaseOutput, self).__init__()
 
     @abstractmethod
-    def output(self, *args, **kwargs):
+    def output(self, content, *args, **kwargs):
         pass
