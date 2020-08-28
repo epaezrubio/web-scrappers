@@ -14,6 +14,6 @@ class DictListMarkdownFormatter(BaseFormatter):
             for entry in value:
                 msg = msg + "- {}\n".format(entry)
 
-            msg = msg + "\n\n"
+            msg = msg + "\n"
 
         return msg
