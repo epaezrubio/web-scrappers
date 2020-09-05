@@ -7,3 +7,9 @@ def fetch_html(target):
     soup = BeautifulSoup(response.text, "html.parser")
 
     return soup
+
+
+def fetch_header(target, header):
+    response = requests.get(target, allow_redirects=False)
+
+    return response.headers.get(header)
