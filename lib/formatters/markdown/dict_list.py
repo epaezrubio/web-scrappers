@@ -1,4 +1,5 @@
 from lib.formatters.base.base_formatter import BaseFormatter
+from lib.utils.markdown import escape_markdown
 
 
 class DictListMarkdownFormatter(BaseFormatter):
@@ -9,10 +10,10 @@ class DictListMarkdownFormatter(BaseFormatter):
         msg = ''
 
         for key, value in content.items():
-            msg = msg + "*{}:*\n".format(key)
+            msg = msg + "*{}:*\n".format(escape_markdown(key))
 
             for entry in value:
-                msg = msg + "- {}\n".format(entry)
+                msg = msg + "- {}\n".format(escape_markdown(entry))
 
             msg = msg + "\n"
 
