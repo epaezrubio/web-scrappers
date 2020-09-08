@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 
 
 def fetch_html(target):
-    response = requests.get(target)
+    response = requests.get(target, headers={'User-Agent': 'Mozilla/5.0'})
     soup = BeautifulSoup(response.text, "html.parser")
 
     return soup

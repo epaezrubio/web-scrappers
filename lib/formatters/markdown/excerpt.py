@@ -7,5 +7,10 @@ class ExcerptFormatter(BaseFormatter):
         super(ExcerptFormatter, self).__init__()
 
     def format(self, content, *args, **kwargs):
-        return '*{}:*\n\n{}\n{}'.format(escape_markdown(content[0]),
+        if content[1]:
+            string = '*{}:*\n\n{}\n{}'
+        else:
+            string = '*{}:*{}\n\n{}\n'
+
+        return string.format(escape_markdown(content[0]),
             escape_markdown(content[1]), escape_markdown(content[2]))
