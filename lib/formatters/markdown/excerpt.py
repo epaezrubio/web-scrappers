@@ -8,7 +8,7 @@ class ExcerptFormatter(BaseFormatter):
 
     def format(self, content, *args, **kwargs):
         if content[1]:
-            string = '*{}:*\n\n{}\n{}'
+            string = '*{}:*\n\n{}\n\n{}\n'
         else:
             string = '*{}:*{}\n\n{}\n'
 

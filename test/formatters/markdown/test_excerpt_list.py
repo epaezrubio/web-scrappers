@@ -6,4 +6,4 @@ def test_excerpt_list():
         ['foo', 'bar', 'test'],
         ['excerpt', 'list', 'test']])
 
-    assert out == '*foo:*\n\nbar\ntest\n\n*excerpt:*\n\nlist\ntest\n\n'
+    assert out == '*foo:*\n\nbar\n\ntest\n\n\n*excerpt:*\n\nlist\n\ntest\n\n\n'
