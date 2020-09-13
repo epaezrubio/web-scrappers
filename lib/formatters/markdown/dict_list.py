@@ -9,7 +9,9 @@ class DictListMarkdownFormatter(BaseFormatter):
     def format(self, content, *args, **kwargs):
         msg = ''
 
-        for key, value in content.items():
+        sorted_items = sorted(content.items(), key=lambda x: x[0], reverse=True)
+
+        for key, value in sorted_items:
             msg = msg + "*{}:*\n".format(escape_markdown(key))
 
             for entry in value:
